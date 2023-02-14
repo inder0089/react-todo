@@ -29,9 +29,13 @@ const Todonew = () => {
     setItems(updateditems);
   };
   const edititem = (item, id) => {
-    // console.log(item);
+    console.log(item);
     setInputData(item);
     setEditItem(id);
+  };
+
+  const removeall = () => {
+    setItems([]);
   };
   return (
     <div>
@@ -63,7 +67,9 @@ const Todonew = () => {
             );
           })}
         </ul>
-        <button className="btn">remove all</button>
+        <button className="btn" onClick={removeall}>
+          remove all
+        </button>
       </div>
     </div>
   );

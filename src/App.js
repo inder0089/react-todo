@@ -1,5 +1,6 @@
 import "./App.css";
 import Todolist from "./component/Todolist";
+import Todomonday from "./component/Todomonday";
 // import Todo from "./component/Todo";
 // import Todonew from "./component/Todonew";
 function App() {
@@ -7,7 +8,8 @@ function App() {
     <div className="App">
       {/* <Todonew /> */}
       {/* <TodoThree /> */}
-      <Todolist />
+      {/* <Todolist /> */}
+      <Todomonday />
     </div>
   );
 }

@@ -4,7 +4,17 @@ function Todoinder() {
   const [inputData, setInputData] = useState("");
   const [items, setitems] = useState([]);
 
+  const [name, setInputname] = useState("");
+  const [nameitem, setnameItem] = useState("");
+
+  // let intialstate = {
+  //   inputData,
+  //   name,
+  // };
+  // const [newData, setnewData] = useState([intialstate]);
   //   console.log("items", items,);
+
+  // console.log("newData",newData);
 
   const [editdata, seteditdata] = useState(null);
 
@@ -13,6 +23,7 @@ function Todoinder() {
       alert("entera text");
     } else {
       setitems([...items, inputData]);
+      setnameItem([...nameitem, name]);
       //   console.log("inder", items);
       setInputData("");
     }
@@ -62,6 +73,11 @@ function Todoinder() {
           value={inputData}
           onChange={(e) => setInputData(e.target.value)}
         />
+        {/* <input
+          type="text"
+          value={name}
+          onChange={(e) => setInputname(e.target.value)}
+        /> */}
         <button onClick={additems}>Add</button>
         <button onClick={updateData}>Update</button>
       </div>
